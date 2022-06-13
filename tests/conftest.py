@@ -450,8 +450,12 @@ def tolerate(request: pytest.FixtureRequest):
 def pytest_configure(config):
     config.addinivalue_line(
         "markers",
-        "tolerate: mark a test to swallow errors up to a certain threshold. "
-        "Use to test (ε,δ)-approximations.",
+        "tolerate(max_failures, *, exceptions_to_ignore=None): "
+        "mark a test to swallow errors up to a certain threshold. "
+        "Use to test (ε,δ)-approximations. "
+        "\nThe first argument, *max_failures*, is required and is the number of errors to swallow before failing."
+        "\nThe *exceptions_to_ignore* keyword is the list of error types that should be swallowed "
+        "but not counted in the number of failures.",
     )
     config._tolerate_session = TolerateErrorsSession(config)
 
