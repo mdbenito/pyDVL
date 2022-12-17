@@ -1,0 +1,10 @@
+sphinx==5.3.0
+sphinxcontrib-websupport==1.2.4
+sphinx-rtd-theme
+sphinx-design
+sphinx-math-dollar
+sphinx-hoverxref
+sphinxcontrib-bibtex
+nbsphinx
+furo
+ipython
